@@ -63,7 +63,6 @@ public class AppTest
         driver.findElement(By.id("btnRegister")).click();
         String result = driver.findElement(By.className("card-header")).getText();
         assertEquals("Registrar Usuário", result);
-        //Não consigo acessar a modal para pegar o texto
     }
 
     @Test
@@ -99,7 +98,7 @@ public class AppTest
     @Test
     public void altVazioAvaliador() throws InterruptedException{
         driver.findElement(By.id("Btnlogin")).click();
-        driver.findElement(By.id("email")).sendKeys("thiago@gmail.com");
+        driver.findElement(By.id("email")).sendKeys("avaliador@gmail.com");
         driver.findElement(By.id("password")).sendKeys("123123123");
         driver.findElement(By.id("btnSubmitLog")).click();
         Thread.sleep(500);
@@ -121,7 +120,7 @@ public class AppTest
     @Test
     public void altVazioEditor() throws InterruptedException{
         driver.findElement(By.id("Btnlogin")).click();
-        driver.findElement(By.id("email")).sendKeys("thiago@gmail.com");
+        driver.findElement(By.id("email")).sendKeys("editor@gmail.com");
         driver.findElement(By.id("password")).sendKeys("123123123");
         driver.findElement(By.id("btnSubmitLog")).click();
         Thread.sleep(500);
@@ -176,7 +175,7 @@ public class AppTest
     @Test
     public void altInvalidoAvaliador() throws InterruptedException{
         driver.findElement(By.id("Btnlogin")).click();
-        driver.findElement(By.id("email")).sendKeys("thiago@gmail.com");
+        driver.findElement(By.id("email")).sendKeys("avaliador@gmail.com");
         driver.findElement(By.id("password")).sendKeys("123123123");
         driver.findElement(By.id("btnSubmitLog")).click();
         Thread.sleep(500);
@@ -347,52 +346,21 @@ public class AppTest
         assertEquals("Atualizando Revista Revista 1", result);
     }
 
-    @Test
-    public void artigoJaPub() throws InterruptedException{
-        driver.findElement(By.id("Btnlogin")).click();
-        driver.findElement(By.id("email")).sendKeys("thiago@gmail.com");
-        driver.findElement(By.id("password")).sendKeys("123123123");
-        driver.findElement(By.id("btnSubmitLog")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("home")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("artigos")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("minhasSub")).click();
-        String result = driver.findElement(By.className("text-center")).getText();
-        assertEquals("Submissões Pendentes", result);
-    }
-    @Test
-    public void removAutorERevistaVinc() throws InterruptedException{
-        driver.findElement(By.id("Btnlogin")).click();
-        driver.findElement(By.id("email")).sendKeys("thiago@gmail.com");
-        driver.findElement(By.id("password")).sendKeys("123123123");
-        driver.findElement(By.id("btnSubmitLog")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("home")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("artigos")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("minhasSub")).click();
-        String result = driver.findElement(By.className("text-center")).getText();
-        assertEquals("Submissões Pendentes", result);
-    }
-
-    @Test
-    public void tituloArtJaExiste() throws InterruptedException{
-        driver.findElement(By.id("Btnlogin")).click();
-        driver.findElement(By.id("email")).sendKeys("thiago@gmail.com");
-        driver.findElement(By.id("password")).sendKeys("123123123");
-        driver.findElement(By.id("btnSubmitLog")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("home")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("artigos")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("minhasSub")).click();
-        String result = driver.findElement(By.className("text-center")).getText();
-        assertEquals("Submissões Pendentes", result);
-    }
+    // @Test
+    // public void removAutorERevistaVinc() throws InterruptedException{
+    //     driver.findElement(By.id("Btnlogin")).click();
+    //     driver.findElement(By.id("email")).sendKeys("thiago@gmail.com");
+    //     driver.findElement(By.id("password")).sendKeys("123123123");
+    //     driver.findElement(By.id("btnSubmitLog")).click();
+    //     Thread.sleep(500);
+    //     driver.findElement(By.id("home")).click();
+    //     Thread.sleep(500);
+    //     driver.findElement(By.id("artigos")).click();
+    //     Thread.sleep(500);
+    //     driver.findElement(By.id("minhasSub")).click();
+    //     String result = driver.findElement(By.className("text-center")).getText();
+    //     assertEquals("Submissões Pendentes", result);
+    // }
 
     @Test
     public void cadastroInvalido() throws InterruptedException{
