@@ -19,3 +19,5 @@ Testes manuais que passaram: 5
 Total que passou: 18
 
 Total que falhou: 06
+
+Link para os Casos de Testes: https://docs.google.com/document/d/1tkDkE2oFSVUI8WmJjMFwKF4YJgjJF7NzelGdwYdfMz0/edit?usp=sharing
